@@ -4,7 +4,7 @@
 	"author": "Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)",
 	"keywords": ["test", "bdd", "tdd", "mocha", "assert", "nodeunit"],
 	"homepage": "https://github.com/haraldrudell/mochawrapper",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"contributors": [
 		"Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)"
 	],
@@ -19,6 +19,10 @@
 	"repository" : {
 		"type" : "git",
 		"url" : "https://haraldrudell@github.com/haraldrudell/mochawrapper.git"
+	},
+	"bin": {
+		"mocha": "./node_modules/mocha/bin/mocha",
+		"_mocha": "./node_modules/mocha/_mocha"
 	},
 	"main": "lib/mochawrapper",
 	"scripts": {
