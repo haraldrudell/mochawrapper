@@ -1,0 +1,28 @@
+{
+	"name": "mochawrapper",
+	"description": "Easy testing using mocha and assert by Harald Rudell",
+	"author": "Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)",
+	"keywords": ["test", "bdd", "tdd", "mocha", "assert", "nodeunit"],
+	"homepage": "https://github.com/haraldrudell/mochawrapper",
+	"version": "0.0.0",
+	"contributors": [
+		"Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)"
+	],
+	"dependencies": {
+		"haraldutil": "",
+		"greatjson": "",
+		"uglify-js": "",
+		"mocha": ""
+	},
+	"devDependencies": {
+	},
+	"repository" : {
+		"type" : "git",
+		"url" : "https://haraldrudell@github.com/haraldrudell/mochawrapper.git"
+	},
+	"main": "lib/mochawrapper",
+	"scripts": {
+		"test": "mocha --ui exports --reporter spec",
+		"monitor": "mocha --ui exports --reporter min --watch"
+	}
+}
