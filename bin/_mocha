@@ -4,7 +4,7 @@ var path = require('path')
 // remove 'node' and the name of this script
 var args = process.argv.slice(2)
 var cmd = path.join(__dirname, '../node_modules/.bin/', path.basename(__filename))
-var proc = require('child_process').spawn(cmd, args)
+var proc = require('child_process').spawn(cmd, {stdin: 'inherit'}, args)
 proc.stdout.pipe(process.stdout, {end: false})
 proc.stderr.pipe(process.stderr, {end: false})
 
