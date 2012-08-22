@@ -4,7 +4,7 @@
 	"author": "Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)",
 	"keywords": ["test", "bdd", "tdd", "mocha", "assert", "nodeunit"],
 	"homepage": "https://github.com/haraldrudell/mochawrapper",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"contributors": [
 		"Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)"
 	],
@@ -22,7 +22,7 @@
 	},
 	"bin": {
 		"mocha": "./bin/mocha",
-		"_mocha": ".bin/_mocha"
+		"_mocha": "./bin/_mocha"
 	},
 	"main": "lib/mochawrapper",
 	"scripts": {
