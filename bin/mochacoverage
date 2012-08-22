@@ -1,0 +1,10 @@
+#! /usr/bin/env node
+
+// http://nodejs.org/api/path.html
+var path = require('path')
+
+var proc = require('child_process').spawn('node',
+	[path.join(__dirname, '../binjs/mochacoverage')].concat(process.argv.slice(2)),
+	{stdio: 'inherit'})
+// forward the exit code
+proc.on('exit', process.exit)

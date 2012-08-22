@@ -2,6 +2,10 @@
 
 The mochawrapper modules makes testing with mocha and assert easier.
 
+* Automated test coverage report
+* Package consistency test addresses frequent forgotten items
+* Enhanced assertion printouts of actual and expected values
+
 ## Get It Now
 
 * [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) is on github
@@ -66,6 +70,74 @@ npm test
 ```
 npm run-script monitor
 ```
+
+# Test Coverage Report
+
+After adding Mocha Wrapper to your project:
+
+```
+mochacoverage
+
+mochacoverage Preparing an automated test coverage report
+mochacoverage Invoking jsCoverage
+mochacoverage Running tests
+Files checked for syntax: javascript:9, json:1 in 0.1 s
+mochacoverage Preparing report
+mochacoverage Launching browser
+mochacoverage Complete
+```
+
+This does coverage analysis of JavaScript files in the project's lib folder. When complete, Mocha Wrapper launches a new tab in the system default browser containing JavaScript source code. Lines marked red were not executed.
+
+# Typical Test
+
+Here are two tests from a test suite. The first one is regular code, and the second test features a callback.
+
+```js
+var assert = require('mochawrapper')
+
+exports['Array Length:'] = {
+	'array.length returns a number': function () {
+		var expected = 'number'
+		var actual = typeof [].length
+		assert.equal(expected, actual)
+	},
+	'Testing with callback (asynchronous)': function (done) {
+		setTimeout(completeWhenThisExecutes, 100)
+		console.log('background complete')
+		function completeWhenThisExecutes() {
+			console.log('finishing test')
+			done()
+		}
+	}
+}
+
+npm test
+
+> cloudclearing@0.0.2 test /home/foxyboy/Desktop/c505/node/cloudclearing
+> mocha --ui exports --reporter spec
+
+
+  Array Length:
+    ✓ array.length returns a number 
+    ◦ Testing with callback (asynchronous): background complete
+finishing test
+    ✓ Testing with callback (asynchronous) (111ms)
+
+  Package Consistency:
+    ◦ Proper JavaScript and json syntax: Files checked for syntax: javascript:16, json:1 in 0.1 s
+    ✓ Proper JavaScript and json syntax (79ms)
+    ✓ Package descriptor file 
+    ✓ git ignore declaration 
+    ✓ Readme 
+
+
+  ✔ 7 tests complete (198ms)
+```
+
+# Reference
+
+mochacoverage [project folder, default lib]
 
 # Notes
 
