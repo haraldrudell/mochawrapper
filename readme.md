@@ -10,6 +10,52 @@ The mochawrapper modules makes testing with mocha and assert easier.
 
 * [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) is on github
 
+## SHOW ME RIGHT, RIGHT NOW
+
+A project using mochawrapper is [tagfinder](https://github.com/haraldrudell/tagfinder):
+
+```
+git clone https://github.com/haraldrudell/tagfinder
+cd tagfinder
+npm install
+mochacoverage
+```
+
+The system's browser displays the test coverage report for tagfinder. To see test regular results:
+
+```
+npm test
+
+> tagfinder@0.1.0 test /home/foxyboy/Desktop/c505/node/tf
+> mocha --ui exports --reporter spec
+
+  Empty Markup
+    ✓ Can compile undefined 
+    ✓ Can compile empty string 
+
+  Parsing
+    ✓ Can remove html comments 
+    ✓ Can find opening tags 
+    ✓ Empty attributes 
+    ✓ Unquoted attributes 
+    ✓ Quoted attributes 
+    ✓ Unescaped content: script and textarea 
+    ✓ Closing tag in unescaped content 
+    ✓ MathML 
+    ✓ cdata section 
+    ✓ svg 
+
+  Package Consistency:
+    ◦ Proper JavaScript and json syntax: Files checked for syntax: javascript:3, json:1 in 0.1 s
+    ✓ Proper JavaScript and json syntax (87ms)
+    ✓ Package descriptor file 
+    ✓ git ignore declaration 
+    ✓ Readme 
+
+
+  ✔ 16 tests complete (102ms)
+```
+
 # Add Mocha Wrapper to Your Project
 
 This requires modifying package.json, install the module and copying one file.
