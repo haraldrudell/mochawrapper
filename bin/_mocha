@@ -1,25 +1,4 @@
-#!/usr/bin/env node
+#! /bin/bash
 
-var path = require('path')
-// remove 'node' and the name of this script
-var args = process.argv.slice(2)
-var cmd = path.join(__dirname, '../node_modules/.bin/', path.basename(__filename))
-var proc = require('child_process').spawn(cmd, args, {stdin: 'inherit'})
-proc.stdout.pipe(process.stdout, {end: false})
-proc.stderr.pipe(process.stderr, {end: false})
-
-/*
-wait for all streams to end, child process to exit
-then exit with child's exitCode
-*/
-var exitCode = 0
-var exitCounter = 0
-proc.on('exit', function(code) {
-	exitCode = code
-	end()
-})
-proc.stdout.on('end', end)
-proc.stderr.on('end', end)
-function end() {
-	if (++exitCounter == 3) process.exit(exitCode)
-}
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+$DIR/../node_modules/.bin/_mocha $@
