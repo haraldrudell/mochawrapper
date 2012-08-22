@@ -21,10 +21,9 @@ var re = new RegExp('\\.(js)$');
 var basename = path.basename
 
 var folder = process.argv[2] || 'lib'
-
+console.log(__dirname)
 // find absolute deployment folder
-var pos = __dirname.indexOf('/node_modules')
-var deployFolder = ~pos ? __dirname.substring(0, pos) : path.join(__dirname, '..')
+var deployFolder = process.cwd()
 
 // the folder we move
 var folder0 = path.join(deployFolder, folder)

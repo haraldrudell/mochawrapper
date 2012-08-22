@@ -73,7 +73,7 @@ npm run-script monitor
 
 # Test Coverage Report
 
-After adding Mocha Wrapper to your project:
+After adding Mocha Wrapper to your project, make sure the project folder is your current working directory and type:
 
 ```
 mochacoverage
@@ -88,6 +88,15 @@ mochacoverage Complete
 ```
 
 This does coverage analysis of JavaScript files in the project's lib folder. When complete, Mocha Wrapper launches a new tab in the system default browser containing JavaScript source code. Lines marked red were not executed.
+
+## Tip
+
+If you add /*-cov to .gitignore coverage report folders will not be checked in. Sample content:
+
+```
+/node_modules
+/*-cov
+```
 
 # Typical Test
 
