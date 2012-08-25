@@ -33,6 +33,9 @@ exports['Add Mocha:'] = {
 		var expectedJson = '{\n'+
 			'  "name": "addedbymochawrapper",\n' +
 			'  "version": "0.0.0",\n' +
+			'  "devDependencies": {\n' +
+			'    "mochawrapper": ""\n' +
+			'  },\n' +			
 			'  "scripts": {\n' +
 			'    "test": "mocha --ui exports --reporter spec",\n' +
 			'    "monitor": "mocha --ui exports --reporter min --watch",\n' +
