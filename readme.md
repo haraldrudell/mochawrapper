@@ -1,14 +1,23 @@
 # Mocha Wrapper
 
-The mochawrapper modules makes testing with mocha and assert easier.
+The [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) module makes testing with mocha and assert very easy.
 
 * Automated test coverage report
 * Package consistency test looks for frequently forgotten items
+* Automated adding of mocha to your project
 * Enhanced assertion printouts with message, actual and expected values
 
-## Get It Now
+## Add to my project NOW
 
-* [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) is on github
+```
+npm install mochawrapper; node_modules/.bin/addmocha; npm test
+
+> mochawrapper@0.0.18 test /home/foxyboy/Desktop/c505/node/mochawrapper
+> mocha --ui exports --reporter spec
+...
+```
+
+The `addmocha` command updates .gitignore, package.json and the test folder in a  safe manner so testing can start immediately from a single dependency.
 
 ## SHOW ME RIGHT, RIGHT NOW
 
@@ -18,19 +27,64 @@ A project using mochawrapper is [tagfinder](https://github.com/haraldrudell/tagf
 git clone https://github.com/haraldrudell/tagfinder
 cd tagfinder
 npm install
-mochacoverage
+
+npm test
+node_modules/.bin/mochacoverage
 ```
 
-The system's browser displays the test coverage report for tagfinder.
+The system’s browser displays the test coverage report for tagfinder.
+
+## Automatic Coverage Report
+
+`npm run-script coverage` displays a test coverage report by opening a tab or window in the system’s browser. There is no need to modify any code to run coverage, and you can continuously use it as a guide for further areas to test.
+
+# Reference
+
+## Continuous Testing
+
+`npm run-script monitor` continuously displays current test results and rerun the tests as you save your sourcefiles.
+
+## Test Everything
+
+`npm test` runs all the tests in the test folder.
+
+## Debug Tests
+
+`npm run-script debugtest` runs all tests using the debugger. By inserting JavaScript’s debugger statement at strategic locations you can run to the exact location where there is something funky going on.
+
+## Coverage Report
+
+```
+npm run-script coverage
+
+mochacoverage Preparing an automated test coverage report
+mochacoverage Invoking jsCoverage
+mochacoverage Running tests
+Files checked for syntax: javascript:9, json:1 in 0.1 s
+mochacoverage Preparing report
+mochacoverage Launching browser
+mochacoverage Complete
+```
+
+This does coverage analysis of JavaScript files in the project's lib folder. When complete, Mocha Wrapper launches a new tab in the system default browser containing JavaScript source code. Lines marked red were not executed.
+
+The report can also be invoke using `nodemodules/.bin/mochacoverage`
+
+## Getting jscoverage
 
 The [jsCoverage](http://siliconforks.com/jscoverage/) command is required.
 
-* On Linux: sudo apt-get install jscoverage
-* Windows: jsCoverage site has zip to download
-* Mac: macports jscoverage
-* [github node-jscoverage](https://github.com/visionmedia/node-jscoverage)
+```
+jscoverage --version
+jscoverage 0.5.1
+```
 
-To see test regular results:
+* Linux has a jscoverage package: `sudo apt-get install jscoverage`
+* Windows: [jsCoverage](http://siliconforks.com/jscoverage/) site has zip to download
+* Mac: `sudo macports install jscoverage`
+* There is a [github node-jscoverage](https://github.com/visionmedia/node-jscoverage) if you have a C compiler installed.
+
+## Regular Test Output
 
 ```
 npm test
@@ -65,95 +119,11 @@ npm test
   ✔ 16 tests complete (102ms)
 ```
 
-# Add Mocha Wrapper to Your Project
-
-This requires modifying package.json, install the module and copying one file.
-
-1\. In the devDendencies object add mochawrapper:
-
-```json
-	"devDependencies": {
-		"mochawrapper": ""
-	},
-```
-
-2\. In the scripts object add test and monitor:
-
-```json
-	"scripts": {
-		"test": "mocha --ui exports --reporter spec",
-		"monitor": "mocha --ui exports --reporter min --watch"
-	}
-```
-
-3\. Install mochawrapper
-
-```
-npm install
-```
-
-4\. Add the package test by creating a test directory and copying mochawrapper's file package-test/test-package.js there
-
-```
-mkdir test
-cp node_modules/mochawrapper/package-test/test-package.js test
-```
-
-5\. Test
-
-```
-npm test
-
-> cloudclearing@0.0.2 test /home/foxyboy/Desktop/c505/node/cloudclearing
-> mocha --ui exports --reporter spec
-
-
-
-  Package Consistency:
-    ◦ Proper JavaScript and json syntax: Files checked for syntax: javascript:16, json:1 in 0.1 s
-    ✓ Proper JavaScript and json syntax (79ms)
-    ✓ Package descriptor file 
-    ✓ git ignore declaration 
-    ✓ Readme 
-
-
-  ✔ 5 tests complete (86ms)
-```
-
-6\. Continuously test as you update files of your project:
-
-```
-npm run-script monitor
-```
-
-# Test Coverage Report
-
-After adding Mocha Wrapper to your project, make sure the project folder is your current working directory and type:
-
-```
-mochacoverage
-
-mochacoverage Preparing an automated test coverage report
-mochacoverage Invoking jsCoverage
-mochacoverage Running tests
-Files checked for syntax: javascript:9, json:1 in 0.1 s
-mochacoverage Preparing report
-mochacoverage Launching browser
-mochacoverage Complete
-```
-
-This does coverage analysis of JavaScript files in the project's lib folder. When complete, Mocha Wrapper launches a new tab in the system default browser containing JavaScript source code. Lines marked red were not executed.
-
 ## Tip
 
-If you add /*-cov to .gitignore coverage report folders will not be checked in. Sample content:
+Add `node_modules/.bin` to your PATH environment variable to run executable scripts from your modules.
 
-```
-/node_modules
-/*-cov
-```
-
-# Typical Test
+# Test Examples
 
 Here are two tests from a test suite. The first test is regular code, and the second test features a callback.
 
@@ -201,13 +171,9 @@ finishing test
   ✔ 7 tests complete (198ms)
 ```
 
-# Reference
-
-mochacoverage [project folder, default lib]
-
 # Notes
 
-© [Harald Rudell](http://www.haraldrudell.com) wrote this for node in August, 2012
+© [Harald Rudell](http://www.haraldrudell.com) wrote mochawrapper for node in August, 2012
 
 No warranty expressed or implied. Use at your own risk.
 
