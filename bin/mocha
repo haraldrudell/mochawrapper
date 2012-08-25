@@ -1,18 +1,14 @@
-set -eu
 DIR="$(cd "$(dirname "$0")" && pwd)"
 MOCHA="$DIR/../mochawrapper/node_modules/mocha/bin/mocha"
-echo $MOCHA
 if [ -x "$MOCHA" ]; then
-echo "$MOCHA" "$@"
 "$MOCHA" "$@"
 else
 MOCHA="$DIR/../mocha/bin/mocha"
-echo $MOCHA
 if [ -x "$MOCHA" ]; then
-echo "$MOCHA" "$@"
 "$MOCHA" "$@"
 else
 	echo "Can't find executable"
 	exit 1
 fi
 fi
+unset

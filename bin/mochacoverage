@@ -1,2 +1,2 @@
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DIR="$(cd "$(dirname "$0")" && pwd)"
 node -e "require(\"$DIR\" + '/../mochawrapper/lib/mochacoverage.js').run()" "$@"

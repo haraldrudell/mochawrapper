@@ -79,4 +79,7 @@ exports['Add Mocha:'] = {
 			done()
 		}
 	},
+	'Lib folder': function () {
+		assert.equal(fs.existsSync(path.join(outFolder, 'lib')), true)
+	},
 }
