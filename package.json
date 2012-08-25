@@ -4,7 +4,7 @@
 	"author": "Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)",
 	"keywords": ["test", "bdd", "tdd", "mocha", "assert", "nodeunit"],
 	"homepage": "https://github.com/haraldrudell/mochawrapper",
-	"version": "0.0.17",
+	"version": "0.0.18",
 	"contributors": [
 		"Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)"
 	],
@@ -24,11 +24,13 @@
 	"bin": {
 		"mocha": "./bin/mocha",
 		"_mocha": "./bin/_mocha",
-		"mochacoverage": "./bin/mochacoverage"
+		"mochacoverage": "./bin/mochacoverage",
+		"addmocha": "./bin/addmocha"
 	},
 	"main": "lib/mochawrapper",
 	"scripts": {
 		"test": "mocha --ui exports --reporter spec",
-		"monitor": "mocha --ui exports --reporter min --watch"
+		"monitor": "mocha --ui exports --reporter min --watch",
+		"debugtest": "mocha --debug-brk --ui exports --reporter spec"
 	}
 }

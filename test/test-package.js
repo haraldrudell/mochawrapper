@@ -1,5 +1,5 @@
 // test-package.js
-// use test-package from mochawrapper
+// tests package consistency using mochawrapper
 // © Harald Rudell 2012
 
-module.exports = require('../lib-cov/test-package')
+module.exports = require('../lib/test-package')

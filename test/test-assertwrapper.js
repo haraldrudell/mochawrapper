@@ -9,9 +9,6 @@ var assert0 = require('assert')
 // https://github.com/haraldrudell/haraldutil
 var haraldutil = require('haraldutil')
 
-var expected = 'EEE'
-var actual = 'AAA'
-
 exports['Assertion messages with expected and actual values:'] = {
 	'verify assertwrapper exports': function () {
 		assert.equal(Object.keys(assert).length, Object.keys(assert0).length,
@@ -40,18 +37,6 @@ exports['Assertion messages with expected and actual values:'] = {
 			assert.ok(input, 'message')
 		})
 	},
-
-/*
-	'assert.equal': function () {
-		//assert0.equal(actual, expected, 'message')
-		try {
-			assert.equal(actual, expected, 'message')
-		} catch (e) {
-			throw e // TODO
-		}
-		// TODO
-	},
-*/
 }
 
 function verifyUpdatedMessage(input, f, invert) {
@@ -70,6 +55,6 @@ function verifyUpdatedMessage(input, f, invert) {
 	if (invert) contains = !contains
 	assert(contains, msg +
 		haraldutil.inspectAll(key) + ': ' +
-		haraldutil.inspectAll(exception.message)
-	, false)
+		haraldutil.inspectAll(exception.message),
+		false)
 }

@@ -1,0 +1,2 @@
+DIR="$(cd "$(dirname "$0")" && pwd)"
+node -e "require(\"$DIR\" + '/../lib/addmocha.js').run()" "$@"

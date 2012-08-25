@@ -3,8 +3,8 @@
 The mochawrapper modules makes testing with mocha and assert easier.
 
 * Automated test coverage report
-* Package consistency test addresses frequent forgotten items
-* Enhanced assertion printouts of actual and expected values
+* Package consistency test looks for frequently forgotten items
+* Enhanced assertion printouts with message, actual and expected values
 
 ## Get It Now
 
@@ -21,7 +21,16 @@ npm install
 mochacoverage
 ```
 
-The system's browser displays the test coverage report for tagfinder. To see test regular results:
+The system's browser displays the test coverage report for tagfinder.
+
+The [jsCoverage](http://siliconforks.com/jscoverage/) command is required.
+
+* On Linux: sudo apt-get install jscoverage
+* Windows: jsCoverage site has zip to download
+* Mac: macports jscoverage
+* [github node-jscoverage](https://github.com/visionmedia/node-jscoverage)
+
+To see test regular results:
 
 ```
 npm test
@@ -146,7 +155,7 @@ If you add /*-cov to .gitignore coverage report folders will not be checked in. 
 
 # Typical Test
 
-Here are two tests from a test suite. The first one is regular code, and the second test features a callback.
+Here are two tests from a test suite. The first test is regular code, and the second test features a callback.
 
 ```js
 var assert = require('mochawrapper')
@@ -166,7 +175,9 @@ exports['Array Length:'] = {
 		}
 	}
 }
+```
 
+```
 npm test
 
 > cloudclearing@0.0.2 test /home/foxyboy/Desktop/c505/node/cloudclearing
