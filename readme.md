@@ -9,6 +9,8 @@ The [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) module makes t
 
 ## Add to my project NOW
 
+**Simply add mocha :)**
+
 ```
 npm install mochawrapper; node_modules/.bin/addmocha; npm test
 
@@ -29,7 +31,7 @@ cd tagfinder
 npm install
 
 npm test
-node_modules/.bin/mochacoverage
+npm run-script coverage
 ```
 
 The system’s browser displays the test coverage report for tagfinder.
@@ -68,7 +70,7 @@ mochacoverage Complete
 
 This does coverage analysis of JavaScript files in the project's lib folder. When complete, Mocha Wrapper launches a new tab in the system default browser containing JavaScript source code. Lines marked red were not executed.
 
-The report can also be invoke using `nodemodules/.bin/mochacoverage`
+The report can also be invoke using `nodemodules/.bin/mochacoverage` or simply `mochacoverage` if you have updated your PATH. For both of these methods, you can add a top-level folder other than `lib`.
 
 ## Getting jscoverage
 
