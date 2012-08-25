@@ -31,6 +31,7 @@
 	"scripts": {
 		"test": "mocha --ui exports --reporter spec",
 		"monitor": "mocha --ui exports --reporter min --watch",
-		"debugtest": "mocha --debug-brk --ui exports --reporter spec"
+		"debugtest": "mocha --debug-brk --ui exports --reporter spec",
+		"coverage": "mochacoverage"
 	}
 }
