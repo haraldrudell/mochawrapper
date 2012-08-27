@@ -9,6 +9,29 @@ var assert0 = require('assert')
 // https://github.com/haraldrudell/haraldutil
 var haraldutil = require('haraldutil')
 
+/*
+assert exports:
+{ [Function: ok]
+  AssertionError: 
+   { [Function: AssertionError]
+     super_: 
+      { [Function: Error]
+        captureStackTrace: [Function: captureStackTrace],
+        stackTraceLimit: 10 } },
+  fail: [Function: fail],
+  ok: [Circular],
+  equal: [Function: equal],
+  notEqual: [Function: notEqual],
+  deepEqual: [Function: deepEqual],
+  notDeepEqual: [Function: notDeepEqual],
+  strictEqual: [Function: strictEqual],
+  notStrictEqual: [Function: notStrictEqual],
+  throws: [Function],
+  doesNotThrow: [Function],
+  ifError: [Function] }
+*/
+//console.log(assert)
+
 exports['Assertion messages with expected and actual values:'] = {
 	'verify assertwrapper exports': function () {
 		assert.equal(Object.keys(assert).length, Object.keys(assert0).length,

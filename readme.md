@@ -70,7 +70,7 @@ mochacoverage Complete
 
 This does coverage analysis of JavaScript files in the project's lib folder. When complete, Mocha Wrapper launches a new tab in the system default browser containing JavaScript source code. Lines marked red were not executed.
 
-The report can also be invoke using `nodemodules/.bin/mochacoverage` or simply `mochacoverage` if you have updated your PATH. For both of these methods, you can add a top-level folder other than `lib`.
+The report can also be invoke using `node_modules/.bin/mochacoverage` or simply `mochacoverage` if you have updated your PATH. For both of these methods, you can add a top-level folder other than `lib`.
 
 ## Getting jscoverage
 
@@ -136,7 +136,7 @@ exports['Array Length:'] = {
 	'array.length returns a number': function () {
 		var expected = 'number'
 		var actual = typeof [].length
-		assert.equal(expected, actual)
+		assert.equal(actual, expected)
 	},
 	'Testing with callback (asynchronous)': function (done) {
 		setTimeout(completeWhenThisExecutes, 100)
