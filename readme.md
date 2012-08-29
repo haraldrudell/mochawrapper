@@ -11,15 +11,33 @@ The [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) module makes t
 
 **Simply add mocha :)**
 
-```
+```js
 npm install mochawrapper; node_modules/.bin/addmocha; npm test
+```
 
+```
 > mochawrapper@0.0.18 test /home/foxyboy/Desktop/c505/node/mochawrapper
 > mocha --ui exports --reporter spec
 ...
 ```
 
 The `addmocha` command updates .gitignore, package.json and the test folder in a  safe manner so testing can start immediately from a single dependency.
+
+
+Imagine yourself, at blood, toil, tears and sweat, supported by the sweet mocha as you save:
+
+```js
+npm run-scipt monitor
+```
+
+```
+  debugger:1 found in 'lib/passportwrapper.js'
+Files checked for syntax: javascript:27, json:1 in 0.1 s
+
+  ✔ 8 tests complete (150ms)
+
+  ◡ watching
+```
 
 ## SHOW ME RIGHT, RIGHT NOW
 
