@@ -24,10 +24,10 @@ npm install mochawrapper; node_modules/.bin/addmocha; npm test
 The `addmocha` command updates .gitignore, package.json and the test folder in a  safe manner so testing can start immediately from a single dependency.
 
 
-Imagine yourself, at blood, toil, tears and sweat, supported by the sweet mocha as you save:
+Imagine yourself, at blood, toil, tears and sweat, supported by the sweet mocha every time you save your work:
 
 ```js
-npm run-scipt monitor
+npm run-script monitor
 ```
 
 ```
@@ -166,6 +166,8 @@ exports['Array Length:'] = {
 	}
 }
 ```
+Save the tests as a .js file in the project's test folder.
+
 
 ```
 npm test
@@ -194,6 +196,8 @@ finishing test
 # Notes
 
 © [Harald Rudell](http://www.haraldrudell.com) wrote mochawrapper for node in August, 2012
+
+* Mochawrapper wraps and extends **mocha**, a testing framework by [TJ Holowaychuk ](http://tjholowaychuk.com/)
 
 No warranty expressed or implied. Use at your own risk.
 
