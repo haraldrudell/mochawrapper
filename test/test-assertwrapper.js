@@ -34,7 +34,7 @@ assert exports:
 
 exports['Assertion messages with expected and actual values:'] = {
 	'verify assertwrapper exports': function () {
-		assert.equal(Object.keys(assert).length, Object.keys(assert0).length,
+		assert.equal(Object.keys(assert).length - 1, Object.keys(assert0).length,
 			'number of exports different')
 	},
 	'assert() should be updated': function () {
