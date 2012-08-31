@@ -1,2 +1,14 @@
+#! /bin/bash
 DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -d "$DIR/../mochawrapper" ]; then
 node -e "require(\"$DIR\" + '/../mochawrapper/lib/mochacoverage.js').run()" "$@"
+exit $?
+else
+if [ -d "$DIR/../lib" ]; then
+node -e "require(\"$DIR\" + '/../lib/mochacoverage.js').run()" "$@"
+exit $?
+else
+	echo "Can't find executable"
+	exit 1
+fi
+fi

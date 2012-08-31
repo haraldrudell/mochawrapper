@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run-script',
+1 verbose cli   'coverage' ]
+2 info using npm@1.1.48
+3 info using node@v0.8.6
+4 verbose config file /home/foxyboy/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose read json /home/foxyboy/Desktop/c505/node/mochawrapper/package.json
+8 verbose run-script [ 'precoverage', 'coverage', 'postcoverage' ]
+9 info precoverage mochawrapper@0.0.28
+10 info coverage mochawrapper@0.0.28
+11 verbose unsafe-perm in lifecycle true
+12 silly exec sh "-c" "mochacoverage"
+13 silly sh,-c,mochacoverage,/home/foxyboy/Desktop/c505/node/mochawrapper spawning
+14 info mochawrapper@0.0.28 Failed to exec coverage script
+15 error mochawrapper@0.0.28 coverage: `mochacoverage`
+15 error `sh "-c" "mochacoverage"` failed with 127
+16 error Failed at the mochawrapper@0.0.28 coverage script.
+16 error This is most likely a problem with the mochawrapper package,
+16 error not with npm itself.
+16 error Tell the author that this fails on your system:
+16 error     mochacoverage
+16 error You can get their info via:
+16 error     npm owner ls mochawrapper
+16 error There is likely additional logging output above.
+17 error System Linux 3.2.0-30-generic
+18 error command "/usr/local/bin/node" "/usr/local/bin/npm" "run-script" "coverage"
+19 error cwd /home/foxyboy/Desktop/c505/node/mochawrapper
+20 error node -v v0.8.6
+21 error npm -v 1.1.48
+22 error code ELIFECYCLE
+23 verbose exit [ 1, true ]
