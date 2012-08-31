@@ -4,7 +4,7 @@
 	"author": "Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)",
 	"keywords": ["test", "bdd", "tdd", "mocha", "assert", "nodeunit"],
 	"homepage": "https://github.com/haraldrudell/mochawrapper",
-	"version": "0.0.24",
+	"version": "0.0.25",
 	"contributors": [
 		"Harald Rudell <harald@allgoodapps.com> (http://www.haraldrudell.com)"
 	],
@@ -13,7 +13,7 @@
 		"haraldutil": ">= 0.0.10",
 		"greatjson": ">= 0.0.6",
 		"uglify-js": "",
-		"mocha": ""
+		"mocha2": ""
 	},
 	"devDependencies": {
 	},
