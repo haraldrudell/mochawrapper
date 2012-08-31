@@ -1,4 +1,15 @@
 #! /bin/bash
-DIR="$( cd "$( dirname "$0" )" && pwd )"
-$DIR/../mochawrapper/node_modules/.bin/_mocha $@
+DIR="$(cd "$(dirname "$0")" && pwd)"
+MOCHA="$DIR/../mochawrapper/node_modules/mocha2/bin/_mocha"
+if [ -x "$MOCHA" ]; then
+"$MOCHA" "$@"
+else
+MOCHA="$DIR/../mocha2/bin/_mocha"
+if [ -x "$MOCHA" ]; then
+"$MOCHA" "$@"
+else
+	echo "Can't find executable"
+	exit 1
+fi
+fi
 unset

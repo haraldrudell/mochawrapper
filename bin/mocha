@@ -1,9 +1,10 @@
+#! /bin/bash
 DIR="$(cd "$(dirname "$0")" && pwd)"
-MOCHA="$DIR/../mochawrapper/node_modules/mocha/bin/mocha"
+MOCHA="$DIR/../mochawrapper/node_modules/mocha2/bin/mocha"
 if [ -x "$MOCHA" ]; then
 "$MOCHA" "$@"
 else
-MOCHA="$DIR/../mocha/bin/mocha"
+MOCHA="$DIR/../mocha2/bin/mocha"
 if [ -x "$MOCHA" ]; then
 "$MOCHA" "$@"
 else
