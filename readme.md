@@ -4,10 +4,10 @@ The [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) module makes t
 
 ## Benefits
 
-1. Automated read of testing level using **code coverage** report
-2. **Immediate feedback** by rerunning tests as you save
-3. npm test **smoke tests** before code push
-4. **One liner** adding testing to your project
+1. Find untested code via the **code coverage** report
+2. Get **Immediate feedback** by rerunning tests as you save
+3. Run **smoke test** before code push `npm test` to avoid bad pushes
+4. Get testing immediately using **One liner**
 
 ## Features
 
