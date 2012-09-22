@@ -2,10 +2,21 @@
 
 The [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) module makes testing with mocha and assert very easy.
 
-* Automated test coverage report
-* Package consistency test looks for frequently forgotten items
-* Automated adding of mocha to your project
-* Enhanced assertion printouts with message, actual and expected values
+## Benefits
+
+1. Automated read of testing level using **code coverage** report
+2. **Immediate feedback** by rerunning tests as you save
+3. npm test **smoke tests** before code push
+4. **One liner** adding testing to your project
+
+## Features
+
+1. Ability to run **coverage tests** anytime without code changes
+2. **Package consistency** test looks for frequently forgotten items
+3. Automated **adding of mocha** to your project
+4. Enhanced **assertion printouts** with message, actual and expected values
+5.**Abbreviated stack traces** compared to the underlying framework
+6. **Resilience** against syntax issues in test files
 
 ## Add to my project NOW
 
