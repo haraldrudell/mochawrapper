@@ -15,7 +15,7 @@ The [Mocha Wrapper](https://github.com/haraldrudell/mochawrapper) module makes t
 2. **Package consistency** test looks for frequently forgotten items
 3. Automated **adding of mocha** to your project
 4. Enhanced **assertion printouts** with message, actual and expected values
-5.**Abbreviated stack traces** compared to the underlying framework
+5. **Abbreviated stack traces** compared to the underlying framework
 6. **Resilience** against syntax issues in test files
 
 ## Add to my project NOW
