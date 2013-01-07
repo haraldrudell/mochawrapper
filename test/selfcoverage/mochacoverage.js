@@ -11,8 +11,8 @@ var path = require('path')
 // http://nodejs.org/docs/latest/api/fs.html
 var fs = require('fs')
 // https://github.com/visionmedia/mocha
-var mocha = require('mocha2')
-
+var mocha = require('../../node_modules/mocha2')
+mochacoverage()
 exports.testMoch = testMoch
 /*
 run a command-line coverage report
@@ -20,7 +20,8 @@ run a command-line coverage report
 due to the way this is launched:
 process.argv: ['node', 'arg1', ...]
 */
-exports.run = function mochacoverage() {
+exports.run = mochacoverage
+function mochacoverage() {
 
 	console.log(program, 'Preparing an automated test coverage report')
 	var jsCoverageCommand = ['jscoverage', '--no-highlight']
@@ -33,6 +34,7 @@ exports.run = function mochacoverage() {
 
 	// find absolute deployment folder
 	var deployFolder = process.cwd()
+	var jadeFolder = path.join(deployFolder, 'lib')
 
 	// the folder we move
 	var folder0 = path.join(deployFolder, folder)
@@ -109,7 +111,7 @@ exports.run = function mochacoverage() {
 			// and here we copy from html-cov.js HTMNCov
 			try {
 				var jade = require('jade')
-				var file = path.join(__dirname, 'templates/coverage.jade')
+				var file = path.join(jadeFolder, 'templates/coverage.jade')
 				var str = fs.readFileSync(file, 'utf8')
 				var jadeFunction = jade.compile(str, {filename: file})
 				var writeStream = fs.createWriteStream(outFile, {encoding: 'utf-8'})
